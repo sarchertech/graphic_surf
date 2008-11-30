@@ -1,0 +1,15 @@
+<li>
+	<div>
+		<h3><%= project.name %></h3>
+	
+		<%= render :inline => project.description, :locals => {:project => project} %>
+	</div>
+	
+	<a href="<%= project.project_pictures.primary_pic.photo.url %>" rel="lightbox[<%= project.id %>]">
+		<%= image_tag(project.project_pictures.primary_pic.photo.url(:thumb)) %>
+	</a>
+	
+	<% for picture in project.project_pictures.secondary_pics %>
+		<a href="<%= picture.photo.url %>" rel="lightbox[<%= picture.project_id %>]"></a>
+	<% end %>
+</li>

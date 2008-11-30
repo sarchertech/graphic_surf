@@ -1,0 +1,26 @@
+<% content_for :page_stylesheets do %>
+	<%= stylesheet_link_tag 'projects' %>
+<% end %>
+
+<div id="links_top">
+	<%= link_to 'Edit', edit_project_path(@project) %> |
+	<%= link_to 'Destroy', @project, :confirm => 'Are you sure?', :method => :delete %> |
+	<%= link_to 'Back', projects_path %>
+</div>
+
+<div id="project">
+	<div>
+		<h3><%= @project.name %></h3>
+	
+		<%= @project.description %>
+	</div>
+	
+	<p class="pic_name"><%= @project.project_pictures.primary_pic.photo_file_name %></p>
+	<%= image_tag(@project.project_pictures.primary_pic.photo.url(:thumb)) %>
+	
+	<% for pic in @project.project_pictures.secondary_pics %>
+		<p class="pic_name"><%= pic.photo_file_name %></p>
+		<%= image_tag(pic.photo.url(:thumb))%>
+	<% end %>
+
+</div>

@@ -1,0 +1,24 @@
+div#project_form p { margin-bottom: 20px; }
+
+a#add_a_pic { margin-bottom: 10px; }
+
+#description_label { display: block; padding-bottom: 5px; }
+
+p.picture_rows { border-bottom: 1px solid #3E3E3E; padding-bottom: 15px; 
+				 width: 600px; }
+
+p.picture_rows span { display: block ; margin-bottom: 10px; }
+
+/* project show */
+#project { clear: both; }
+
+#project div { float: left; width: 300px; }
+
+#project img { float: right; padding-bottom: 50px; clear: right; }
+
+#project p { margin-bottom: 15px; }
+
+#project p.pic_name { float: right; margin-bottom: 10px; clear: right; }
+
+#links_top { margin-bottom: 30px; }
+

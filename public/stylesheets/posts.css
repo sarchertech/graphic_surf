@@ -1,0 +1,43 @@
+/* active nav */
+div#nav li#blog { background-image: url('../images/blog_bold.png'); margin-top: 52px; 
+		  		  padding-right: 6px; }
+
+div#nav li#blog a { width: 33px; height: 22px; }
+
+/* links */
+* a { text-decoration: underline; }
+
+#contact_return a { text-decoration: none; }
+
+/* post form */
+div#post_form { float: left; width: 600px; }
+
+div#post_help { float: right; width: 270px; padding-left: 30px; }
+
+div#post_help ul { margin-top: 20px; border: 1px solid #3E3E3E; }
+
+div#post_help li { padding: 6px; }
+
+div#post_form p { margin-bottom: 20px; }
+
+a#add_a_pic { margin-bottom: 10px; }
+
+#description_label { display: block; padding-bottom: 5px; }
+
+p.picture_rows { border-bottom: 1px solid #3E3E3E; padding-bottom: 15px; 
+				 width: 600px; }
+
+p.picture_rows span { display: block ; margin-bottom: 10px; }
+
+/* posts index */
+ul#posts { padding-bottom: 30px; }
+
+ul#posts li { padding-bottom: 7px; }
+
+/* links_top */
+div#links_top { padding-bottom: 30px; }
+
+/* posts show */
+p#published { padding-bottom: 20px; }
+
+

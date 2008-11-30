@@ -1,0 +1,48 @@
+/* active nav */
+div#nav li#blog { background-image: url('../images/blog_bold.png'); margin-top: 52px; 
+		  		  padding-right: 6px; }
+
+div#nav li#blog a { width: 33px; height: 22px; }
+
+/* post */
+h3 { font-size: 15pt; font-weight: bold; padding-bottom: 20px; float: left;
+	 width: 400px; line-height: 1.2;}
+
+div#post p#post_date { float: right; font-size: 11pt; color: #5b5b5b; font-weight: bold; }
+
+div#post { float: left; width: 650px; }
+
+div#other_content { float: right; width: 170px; border-left: 1px solid #7c7c7c;
+					padding-left: 10px; padding-bottom: 10px; }
+
+p#recent_posts { font-weight: bold; font-size: 11pt; padding-bottom: 5px; color: #5b5b5b; }
+
+div#other_content li { font-size: 10pt; line-height: 1.75; }
+
+div#other_content li a { color: #7c7c7c; }
+
+p#content_hole { display: none; }
+
+div#post_content p { padding-bottom: 20px; line-height: 1.5; font-size: 11pt; }
+
+div#post_content img { padding-bottom: 20px; }
+
+/* comments */
+h5 { font-size: 12pt; padding-bottom: 10px; padding-top: 20px;
+	 border-top: solid 1px #2b2b2b; }
+
+div#comment_form p { padding-bottom: 10px; }
+
+div#comment_form textarea { width: 420px; }
+
+div#comments { padding-top: 20px; }
+
+div.comment_box { background-color: #588fb1; width: 406px; padding: 7px;
+	 			  margin-bottom: 20px; }
+
+div.comment_box { font-size: 11pt; }
+
+h6 { font-size: 11pt; font-weight: bold; float: left; padding-bottom: 5px; }
+
+p.comment_date { float: right; font-size: 10pt; color: #3e3e3e; }
+

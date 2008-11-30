@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Graphic Surf</title>
+  <%= stylesheet_link_tag 'application', 'lightbox'%>
+	<%= @content_for_page_stylesheets %>
+	
+	<%= javascript_include_tag 'prototype', 'effects', 'builder', 'lightbox', 'application',
+	                            :cache => true %>
+	
+	<!--[if lt IE 7]>
+		<script type="text/javascript" src="/javascripts/unitpngfix.js"></script>
+	<![endif]--> 
+</head>
+<body>
+	<div id="top_bar"></div>
+
+	<div id="page_wrapper">
+		<h1><a href="/">Graphic Surf</a></h1>
+
+		<div id="nav">
+			<ul>
+				<li id="work"><a href="/">work</a></li>
+				<li id="contact">
+					<a href="#contact_return" onclick="window.opera ? Element.scrollTo('contact_return') : Effect.ScrollTo('contact_return'); return false;">
+						contact
+					</a>
+				</li>
+				<li id="blog"><a href="/blog">blog</a></li>
+				<li id="about"><a href="#">about</a></li>
+			</ul>
+		</div>
+
+		<div id="content">
+
+			<%= yield  %>
+			
+			<div class="clear"></div>
+		</div>
+	</div>
+	
+	
+	
+	<div id="gradient_wrapper">
+	  <div id="contact_return">
+	    <a href="#top_bar" onclick="window.opera ? Element.scrollTo('top_bar') : Effect.ScrollTo('top_bar'); return false;">
+	  	  Return to Top
+	  	</a>
+	  	<div class="clear"></div>
+	  </div>
+
+	  <div id="contact_wrapper">
+		  <div id="contact_form">
+			  <h4>Contact Me</h4>
+	 	  </div>
+
+		  <div id="contact_info">
+			
+		  </div>
+
+		  <div class="clear"></div>	
+	  </div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

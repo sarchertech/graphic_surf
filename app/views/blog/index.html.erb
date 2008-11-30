@@ -1,0 +1,61 @@
+<% content_for :page_stylesheets do %>
+	<%= stylesheet_link_tag 'posts' %>
+	<%= stylesheet_link_tag 'blog' %>
+<% end %>
+
+<div id="post">
+	<div id="post_content">
+  	<h3><%= @post.title %></h3>
+
+		<p id="post_date"><%= @post.created_at.strftime('%d %B %Y') %></p>
+		
+		<div class="clear"></div>
+		
+		<%= render :inline => @post.description %>
+	</div>
+	
+	<h5>Add Your Comments</h5>
+	
+	<div id="comment_form">
+		<% form_for(@comment) do |f| %>
+		  <p>
+		    <%= f.label :name, 'Name:' %><br />
+		    <%= f.text_field :name %>
+		  </p>
+		  <p id="content_hole">
+			  Don't fill out the content section.
+			  <%= f.label :content %><br />
+		    <%= f.text_area :content %>
+		  </p>
+		  <p>
+		    <%= f.label :body, 'Comments:' %><br />
+		    <%= f.text_area :body, :size => '45x6' %>
+		  </p>
+		  <p>
+				<%= f.hidden_field :post_id, :value => @post.id %>
+		    <%= f.submit "Post" %>
+		  </p>
+		<% end %>
+	</div>	
+	
+	<div id="comments">	
+		<% for comment in @post.comments %>
+			<div class="comment_box">
+				<h6><%= h(comment.name) %></h6>
+				<p class="comment_date"><%= comment.created_at.to_date %></p>
+				<p class="clear"><%= sanitize (comment.body, :tags => %w(br)) %></p>
+			</div>
+		<% end %>
+	</div>
+</div>
+
+<div id="other_content">
+	<p id="recent_posts">Recent Posts</p>
+	<ul>
+		<% for post in @posts %>
+			<li>
+				<%= link_to truncate(post.title, 20), blog_path(post) %>
+			</li>
+		<% end %>
+	</ul>	
+</div>

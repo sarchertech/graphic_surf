@@ -1,0 +1,47 @@
+<div id="post_form">
+<% form_for(@post, :html => { :multipart => true } )do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </p>
+	
+  <p>
+    <%= f.label :description, 'Description', :id => "description_label" %>
+    <%= f.text_area :description, :size => '68x35' %>
+  </p>
+
+	<div id="pictures">
+		<%= render :partial => 'picture', :collection => @post.post_pictures %>
+	</div>
+
+	<p>
+		<%= add_post_picture_link "Add a picture" %>
+	</p>
+
+	<p>
+		<%= f.label :published %>
+		<%= f.select :published, [['No', false], ['Yes', true]] %>
+	</p>
+	
+  <p>
+    <%= f.submit "Submit" %>
+  </p>
+<% end %>
+</div>
+
+<div id="post_help">
+	<%= link_to_function "Help", "$('help').toggle()" %> 
+	<div id="help" style="display: none;">
+		<ul>
+			<li>&#60&#37&#61 blog_image("reference") &#37&#62</li>
+			<li>&#60&#37&#61 blog_image("reference", :style => "float: left;
+					color: blue;") &#37&#62</li>
+			<li>&#60&#37&#61 link_to("link_name", "url") &#37&#62</li>
+			<li>&#60&#37&#61 image_tag("url") &#37&#62</li>
+		</ul>	
+	</div>	
+</div>
+
+<div class="clear"></div>

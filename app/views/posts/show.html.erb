@@ -1,0 +1,42 @@
+<% content_for :page_stylesheets do %>
+	<%= stylesheet_link_tag 'posts', 'blog' %>
+<% end %>
+
+<div id="links_top">
+	<%= link_to 'Edit', edit_post_path(@post) %> |
+	<%= link_to 'Destroy', @post, :confirm => 'Are you sure?', :method => :delete %> |
+	<%= link_to 'Back', posts_path %>
+</div>
+
+<div id="post">
+	<p id="published">
+		<% if @post.published %>
+			This Post has been Published
+		<% else %>
+			This Post has NOT been Published - 
+			<%= link_to 'Publish?', publish_path(@post), :confirm => 'Are you sure?', 
+																									 :method => :put %>
+		<% end %>
+	</p>
+	
+	<div id="post_content">
+	<h3><%= @post.title %></h3>
+	
+	<p id="post_date"><%= @post.created_at.strftime('%d %B %Y') %></p>
+	
+	<div class="clear"></div>
+
+	<%= render :inline => @post.description %>
+	</div>
+	
+	<div id="comments">	
+		<% for comment in @post.comments %>
+			<div class="comment_box">
+				<h6><%= h(comment.name) %></h6>
+				<p class="comment_date"><%= comment.created_at.to_date %></p>
+				<p class="clear"><%= sanitize (comment.body, :tags => %w(br)) %></p>
+				<%= link_to 'Destroy', comment, :confirm => 'Are you sure?', :method => :delete %>
+			</div>
+		<% end %>
+	</div>
+</div>

@@ -1,0 +1,18 @@
+<div class="picture"> 
+	<% new_or_existing = picture.new_record? ? 'new' : 'existing' %> 
+	<% prefix = "project[#{new_or_existing}_picture_attributes][]" %> 
+	
+	<% fields_for prefix, picture do |picture_form| -%> 
+		<p class="picture_rows">
+			<% unless picture.new_record? %>
+				<span>Current Picture: <%= picture.photo_file_name %> </span>
+			<% end %> 
+			
+			<%= picture_form.label :photo %>
+			<%= picture_form.file_field :photo %>
+			<%= picture_form.label :primary_picture %>
+			<%= picture_form.select :primary_picture, [['No', false], ['Yes', true]] %> 
+			<%= link_to_function " |remove", "$(this).up('.picture').remove()" %> 
+		</p> 
+	<% end -%> 
+</div> 

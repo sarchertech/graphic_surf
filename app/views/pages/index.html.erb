@@ -1,0 +1,15 @@
+<% content_for :page_stylesheets do %>
+	<%= stylesheet_link_tag 'index'%>
+<% end %>
+
+<h2 id="welcome">Aloha. Welcome to Graphic Su</h2>
+
+<p id="welcome_text">
+	Graphic Surf is the online portfolio of Michael Krontz. I am a
+	visual designer who lives near Atlanta, GA. Below you will find
+	several pieces of my work.
+</p>
+
+<ul id="project_list">
+	<%= render :partial => 'projects/project', :collection => @projects %>
+</ul>

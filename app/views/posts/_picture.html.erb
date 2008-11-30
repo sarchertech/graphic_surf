@@ -1,0 +1,18 @@
+<div class="picture"> 
+	<% new_or_existing = picture.new_record? ? 'new' : 'existing' %> 
+	<% prefix = "post[#{new_or_existing}_picture_attributes][]" %> 
+	
+	<% fields_for prefix, picture do |picture_form| -%> 
+		<p class="picture_rows">
+			<% unless picture.new_record? %>
+				<span>Current Picture: <%= picture.blog_photo_file_name %> </span>
+			<% end %> 
+			
+			<%= picture_form.label :blog_photo %>
+			<%= picture_form.file_field :blog_photo, :size => "20" %>
+			<%= picture_form.label :reference %>
+			<%= picture_form.text_field :reference, :size => "20" %>
+			<%= link_to_function " |remove", "$(this).up('.picture').remove()" %> 
+		</p> 
+	<% end -%> 
+</div> 

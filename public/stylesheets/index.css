@@ -1,0 +1,12 @@
+/* active nav */
+div#nav li#work { background-image: url('../images/work_bold.png'); margin-top: 20px; 
+		  		  padding-right: 8px; }
+
+div#nav li#work a { width: 35px; height: 22px; }
+
+/* welcome */
+h2#welcome { float: right; background-image: url('../images/aloha_graphic.png'); 
+			 width: 569px; height: 149px; text-indent: -9999px;}
+
+p#welcome_text { float: right; clear: both; width: 565px; padding: 15px 0px 0px 5px; 
+				 text-align: justify; margin-bottom: 90px; }

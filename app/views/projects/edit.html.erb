@@ -1,0 +1,8 @@
+<% content_for :page_stylesheets do %>
+	<%= stylesheet_link_tag 'projects' %>
+<% end %>
+
+<%= render :partial => 'form' %>
+
+<%= link_to 'Show', @project %> |
+<%= link_to 'Back', projects_path %>

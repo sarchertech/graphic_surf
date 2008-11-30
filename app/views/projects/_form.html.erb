@@ -1,0 +1,27 @@
+<div id="project_form">
+<% form_for(@project, :html => { :multipart => true } )do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+	
+  <p>
+    <%= f.label :description, 'Description', :id => "description_label" %>
+    <%= f.text_area :description %>
+  </p>
+	
+	<div id="pictures">
+		<%= render :partial => 'picture', :collection => @project.project_pictures %>
+	</div>
+
+	<p>
+		<%= add_project_picture_link "Add a picture" %>
+	</p>
+	
+  <p>
+    <%= f.submit "Submit" %>
+  </p>
+<% end %>
+</div>
