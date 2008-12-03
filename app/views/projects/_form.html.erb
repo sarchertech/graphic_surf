@@ -12,6 +12,10 @@
     <%= f.text_area :description %>
   </p>
 	
+	<div id="preview_pictures">
+		<%= render :partial => 'preview_picture', :collection => @project.preview_pictures %>
+	</div>
+	
 	<div id="pictures">
 		<%= render :partial => 'picture', :collection => @project.project_pictures %>
 	</div>

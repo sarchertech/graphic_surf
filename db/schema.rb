@@ -9,7 +9,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081009180842) do
+ActiveRecord::Schema.define(:version => 20081203164803) do
+
+  create_table "comments", :force => true do |t|
+    t.string   "name"
+    t.text     "body"
+    t.integer  "post_id"
+    t.boolean  "spam_status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "post_pictures", :force => true do |t|
     t.integer  "post_id"
@@ -26,6 +35,16 @@ ActiveRecord::Schema.define(:version => 20081009180842) do
     t.string   "title"
     t.text     "description"
     t.boolean  "published",   :default => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "preview_pictures", :force => true do |t|
+    t.integer  "project_id"
+    t.string   "preview_photo_file_name"
+    t.string   "preview_photo_content_type"
+    t.integer  "preview_photo_file_size"
+    t.datetime "preview_photo_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

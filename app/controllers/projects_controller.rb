@@ -15,6 +15,7 @@ class ProjectsController < ApplicationController
   def new
     @project = Project.new
     @project.project_pictures.build
+    @project.preview_pictures.build
   end
 
   # GET /projects/1/edit

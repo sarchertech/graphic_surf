@@ -1,7 +1,7 @@
 class ProjectPicture < ActiveRecord::Base
   belongs_to :project
   
-  has_attached_file :photo, :styles => { :thumb => "570x380>" }
+  has_attached_file :photo
   
   attr_accessible :photo
   attr_accessible :primary_picture

@@ -1,0 +1,16 @@
+<div class="picture"> 
+	<% new_or_existing = preview_picture.new_record? ? 'new' : 'existing' %> 
+	<% prefix = "project[#{new_or_existing}_preview_picture_attributes][]" %> 
+	
+	<% fields_for prefix, preview_picture do |preview_picture_form| -%> 
+		<p class="preview_picture_rows">
+			<% unless preview_picture.new_record? %>
+				<span>Current preview_picture: <%= preview_picture.preview_photo_file_name %> </span>
+			<% end %> 
+			
+			<%= preview_picture_form.label :preview_photo %>
+			<%= preview_picture_form.file_field :preview_photo %>
+			<%= link_to_function " |remove", "$(this).up('.preview_picture').remove()" %> 
+		</p> 
+	<% end -%> 
+</div> 
