@@ -1,4 +1,4 @@
-set :application, "graphic_surf"
+set :application, "graphicsurf.com"
 set :user, "surfer"
 set :repository,  "git@github.com:learc83/graphic_surf.git"
 
@@ -17,8 +17,6 @@ set :deploy_to, "/home/surfer/public_html/#{application}"
 set :scm, "git"
 set :deploy_via, :remote_cache
 
-set :location, "graphicsurf.com"
-
-role :app, location
-role :web, location
-role :db,  location, :primary => true
+role :app, application
+role :web, application
+role :db,  application, :primary => true
