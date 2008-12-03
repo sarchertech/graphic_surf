@@ -24,13 +24,20 @@ role :web, application
 role :db,  application, :primary => true
 
 namespace :deploy do
-  desc "Restarting mod_rails with restart.txt"
-  task :restart, :roles => :app, :except => { :no_release => true } do
-    run "touch #{release_path}/tmp/restart.txt"
+  desc "Tell Passenger to restart the app."
+  task :restart do
+    run "touch #{current_path}/tmp/restart.txt"
   end
- 
+  
   [:start, :stop].each do |t|
-    desc "#{t} task is a no-op with mod_rails"
-    task t, :roles => :app do ; end
+     desc "#{t} task is a no-op with mod_rails"
+     task t, :roles => :app do ; end
+  end
+  
+  desc "Symlink shared configs and folders on each release."
+  task :symlink_shared do
+    run "ln -nfs #{shared_path}/database.yml #{release_path}/config/database.yml"
   end
 end
+
+after 'deploy:update_code', 'deploy:symlink_shared'
