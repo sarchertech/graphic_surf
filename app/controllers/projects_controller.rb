@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  before_filter :authenticate, :except => [:index, :show]
+  before_filter :authenticate
   
   # GET /projects
   def index
