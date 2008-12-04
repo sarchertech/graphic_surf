@@ -26,7 +26,7 @@ role :db,  application, :primary => true
 namespace :deploy do
   desc "Tell Passenger to restart the app."
   task :restart do
-    kill $( passenger-memory-stats | grep 'Passenger ApplicationSpawner' | awk '{ print $1 }' )
+    run "kill $( passenger-memory-stats | grep 'Passenger ApplicationSpawner' | awk '{ print $1 }' )"
     run "touch #{current_path}/tmp/restart.txt"
   end
   
