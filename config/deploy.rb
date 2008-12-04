@@ -26,6 +26,7 @@ role :db,  application, :primary => true
 namespace :deploy do
   desc "Tell Passenger to restart the app."
   task :restart do
+    kill $( passenger-memory-stats | grep 'Passenger ApplicationSpawner' | awk '{ print $1 }' )
     run "touch #{current_path}/tmp/restart.txt"
   end
   
@@ -33,7 +34,7 @@ namespace :deploy do
      desc "#{t} task is a no-op with mod_rails"
      task t, :roles => :app do ; end
   end
-  
+
   desc "Symlink shared configs and folders on each release."
   task :symlink_shared do
     run "ln -nfs #{shared_path}/database.yml #{release_path}/config/database.yml"
