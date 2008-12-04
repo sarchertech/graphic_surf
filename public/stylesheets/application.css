@@ -59,7 +59,8 @@ div#content { clear: both; }
 
 #project_list div { float: left; width: 280px; height: 380px; margin-bottom: 70px; }
 
-#project_list div h3 { font-size: 13pt; font-weight: normal; line-height: 1; }
+#project_list div h3 { font-size: 13pt; font-weight: normal; line-height: 1; 
+					   padding-bottom: 15px; }
 
 #project_list img { float: right; }
 
