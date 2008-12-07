@@ -1,0 +1,6 @@
+--- 
+  :address: smtp.gmail.com
+  :port: 587
+  :user_name: mailer@graphicsurf.com
+  :password: archer83
+  :authentication: :plain
