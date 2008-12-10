@@ -53,7 +53,8 @@ div#nav a { display: block; overflow: hidden; text-indent: -9999px; }
 div#content { clear: both; }
 
 /* project list */
-#project_list { clear: both; }
+#project_list { clear: both; background-image: url('../images/recent_work.png'); 
+				overflow: auto; background-repeat: no-repeat; }
 
 #project_list li { clear: both; }
 
