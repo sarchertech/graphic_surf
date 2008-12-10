@@ -71,11 +71,11 @@ div#content { clear: both; }
 					background-color: #012841; background-repeat: repeat-x;
 					margin-top: 500px; }
 
-#contact_return { width: 600px; clear: both; }
+#contact_return { width: 580px; clear: both; }
 
 #contact_return a { float: right; color: white; font-size: 12pt; padding: 15px 0px 5px 0px; }
 
-#contact_wrapper { background-image: url('../images/1pixel.png'); width: 560px;
+#contact_wrapper { background-image: url('../images/1pixel.png'); width: 540px;
  				   padding-left: 40px; padding-top: 10px; }
 
 #contact_form { width: 320px; float: left; }
@@ -95,13 +95,15 @@ p#contact_content textarea { padding-top: 5px; overflow: auto; }
 					
 #contact_submit { float: right; border: none; padding-bottom: 12px; }
 
-#contact_info { float: left; padding-left: 40px; padding-top: 200px; }
+#contact_info { float: left; padding-left: 40px; padding-top: 170px; }
 
 #contact_info * { color: white; }
 
-#contact_info h5 { font-size: 12pt; }
+#contact_info h5 { font-size: 12pt; background-image: url('../images/graphic_surf_white.png'); 
+				   text-indent: -9999px; width: 122px; height: 37px; padding-bottom: 6px;
+				   background-repeat: no-repeat; }
 
-#contact_info p { padding-bottom: 8px; font-size: 10pt; }
+#contact_info p { padding-bottom: 8px; font-size: 10pt; padding-left: 5px; }
 
 
 
