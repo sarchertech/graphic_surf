@@ -71,14 +71,16 @@ div#content { clear: both; }
 					background-color: #012841; background-repeat: repeat-x;
 					margin-top: 500px; }
 
-#contact_return { width: 580px; clear: both; }
+#contact_return { width: 580px; clear: both; margin-bottom: 5px; }
 
-#contact_return a { float: right; color: white; font-size: 12pt; padding: 15px 0px 5px 0px; }
+#contact_return a { float: right; color: white; font-size: 12pt; padding-top: 3px; }
 
 #contact_wrapper { background-image: url('../images/1pixel.png'); width: 540px;
  				   padding-left: 40px; padding-top: 10px; }
 
 #contact_form { width: 320px; float: left; }
+
+#contact_form form { margin-bottom: 48px; }
 
 #contact_form * { color: white; }
 
@@ -88,12 +90,14 @@ div#content { clear: both; }
 #contact_form p { margin-bottom: 12px; padding: 6px; line-height: 1;
 				  background-image: url('../images/1pixel.png'); }
 					
-p#contact_content textarea { padding-top: 5px; overflow: auto; }
+p#on_mind { margin-bottom: 0px; }
+					
+p#on_mind textarea { padding-top: 5px; overflow: auto; }
 
 #contact_form p * { border: none; font-size: 11pt; background-color: transparent; 
 					line-height: 1.1; }
 					
-#contact_submit { float: right; border: none; padding-bottom: 12px; }
+#contact_submit { float: right; margin-top: 13px; margin-bottom: 5px; }
 
 #contact_info { float: left; padding-left: 40px; padding-top: 170px; }
 
