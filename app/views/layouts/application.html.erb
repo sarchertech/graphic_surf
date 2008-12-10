@@ -57,19 +57,24 @@
 			  <h4>Contact Me</h4>
 				<% form_for :contact, :url => {:controller => 'contacter', :action => 'contact'} do |f| -%>
 				  
-					<%= f.label :Name, 'Name' %>:
-			    <%= f.text_field :name %><br />
-			    
-					<%= f.label :email, 'Email' %>:
-			    <%= f.text_field :email %><br />
-			    
-					<%= f.label :phone, 'Phone' %>:
-			    <%= f.text_field :phone %><br />
+					<p>
+					  <%= f.label :name, 'Name &nbsp' %>
+			      <%= f.text_field :name %>
+			    </p>
+					<p>
+						<%= f.label :email, 'Email &nbsp' %>
+			    	<%= f.text_field :email %>
+			    </p>
+					<p>
+						<%= f.label :phone, 'Phone &nbsp' %>
+			      <%= f.text_field :phone %>
+					</p>
+					<p id="contact_content">
+						<%= f.label :content, "What's on your mind?" %>
+			    	<%= f.text_area :content, :size => '37x5' %>
+					</p>
 			
-					<%= f.label :content, "What's on your mind?" %>
-			    <%= f.text_field :content %><br />
-			
-					<%= submit_tag "Save changes" %>
+					<%= submit_tag "Submit", :id => 'contact_submit' %>
 				<% end -%>
 	 	  </div>
 

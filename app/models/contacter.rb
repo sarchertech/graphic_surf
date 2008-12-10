@@ -1,7 +1,7 @@
 class Contacter < ActionMailer::Base
   def contact(contact)
     @recipients   = 'learc83@gmail.com'
-    @from         = 'mailer@graphicsurf.com'
+    @from         = 'Contact Mailer <mailer@graphicsurf.com>'
     @subject      = 'CLIENT CONTACT'
     @sent_on      = Time.now
     @content_type = 'text/html'

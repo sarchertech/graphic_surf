@@ -4,7 +4,7 @@
 
 img { border: none; }
 
-body { background-color: #2277ac; background-image: url('../images/top_gradient.png'); 
+body { background-color: #2277ac; background-image: url('../images/top_gradient.jpg'); 
 	   background-repeat: repeat-x; }
 
 div#page_wrapper { width: 900px; padding: 0px 30px; margin: auto;}
@@ -75,14 +75,25 @@ div#content { clear: both; }
 
 #contact_return a { float: right; color: white; font-size: 12pt; }
 
-#contact_wrapper { height: 400px; }
+#contact_wrapper { height: 400px; background-image: url('../images/1pixel.png');
+ 				   padding-left: 10px; }
 
-#contact_form { width: 300px; padding-left: 30px; float: left; }
+#contact_form { width: 320px; padding-left: 30px; float: left; }
 
 #contact_form * { color: white; }
 
-#contact_form h4 { padding: 12px 0px; font-size: 23pt; letter-spacing: -.07em; 
-				   font-weight: bold; }
+#contact_form h4 { padding: 10px 0px; font-size: 22pt; letter-spacing: -.08em; 
+				   font-weight: bold; line-height: 1; }
+
+#contact_form p { margin-bottom: 10px; padding: 5px; line-height: 1;
+				  background-image: url('../images/1pixel.png'); }
+					
+p#contact_content textarea { padding-top: 5px; overflow: auto; }
+
+#contact_form p * { border: none; font-size: 11pt; background-color: transparent; 
+					line-height: 1.1; }
+					
+#contact_submit { color: black; }
 
 #contact_info { float: left; }
 
