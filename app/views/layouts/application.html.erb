@@ -71,15 +71,25 @@
 					</p>
 					<p id="contact_content">
 						<%= f.label :content, "What's on your mind?" %>
-			    	<%= f.text_area :content, :size => '37x5' %>
+			    	<%= f.text_area :content, :size => '37x6' %>
 					</p>
 			
-					<%= submit_tag "Submit", :id => 'contact_submit' %>
+					<%= image_submit_tag("submit_button.jpg", :id => "contact_submit", :name => "submit_button", :disabled => false) %>
 				<% end -%>
 	 	  </div>
 
 		  <div id="contact_info">
-			
+				<h5>Graphic Surf</h5>
+				
+				<p>
+					 56 Ruth Way<br />
+					 Douglasville, GA 30134
+				</p>
+				
+				<p>
+					678.428.1541<br />
+					<a href="&#109;&#97;&#105;&#108;&#116;&#111;:&#x61;&#x6C;&#x6F;&#104;&#97;&#x40;&#103;&#x72;&#x61;&#x70;&#104;&#105;&#x63;&#x73;&#117;&#x72;&#x66;&#46;&#x63;&#111;&#x6D;?subject=&#67;&#111;&#110;&#x74;&#x61;&#99;&#116;" title="&#x45;&#109;&#x61;&#105;&#108;&#x20;&#77;&#101;">&#x61;&#108;&#x6F;&#104;&#97;&#x40;&#x67;&#114;&#97;&#x70;&#x68;&#x69;&#x63;&#x73;&#117;&#x72;&#x66;&#46;&#x63;&#111;&#x6D;</a>
+				</p>
 		  </div>
 
 		  <div class="clear"></div>	

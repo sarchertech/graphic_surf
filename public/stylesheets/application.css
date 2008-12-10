@@ -71,21 +71,21 @@ div#content { clear: both; }
 					background-color: #012841; background-repeat: repeat-x;
 					margin-top: 500px; }
 
-#contact_return { width: 455px; clear: both; padding: 15px 0px; }
+#contact_return { width: 600px; clear: both; }
 
-#contact_return a { float: right; color: white; font-size: 12pt; }
+#contact_return a { float: right; color: white; font-size: 12pt; padding: 15px 0px 5px 0px; }
 
-#contact_wrapper { height: 400px; background-image: url('../images/1pixel.png');
- 				   padding-left: 10px; }
+#contact_wrapper { background-image: url('../images/1pixel.png'); width: 560px;
+ 				   padding-left: 40px; padding-top: 10px; }
 
-#contact_form { width: 320px; padding-left: 30px; float: left; }
+#contact_form { width: 320px; float: left; }
 
 #contact_form * { color: white; }
 
-#contact_form h4 { padding: 10px 0px; font-size: 22pt; letter-spacing: -.08em; 
+#contact_form h4 { padding-bottom: 10px; font-size: 22pt; letter-spacing: -.08em; 
 				   font-weight: bold; line-height: 1; }
 
-#contact_form p { margin-bottom: 10px; padding: 5px; line-height: 1;
+#contact_form p { margin-bottom: 12px; padding: 6px; line-height: 1;
 				  background-image: url('../images/1pixel.png'); }
 					
 p#contact_content textarea { padding-top: 5px; overflow: auto; }
@@ -93,9 +93,15 @@ p#contact_content textarea { padding-top: 5px; overflow: auto; }
 #contact_form p * { border: none; font-size: 11pt; background-color: transparent; 
 					line-height: 1.1; }
 					
-#contact_submit { color: black; }
+#contact_submit { float: right; border: none; padding-bottom: 10px; }
 
-#contact_info { float: left; }
+#contact_info { float: left; padding-left: 40px; padding-top: 200px; }
+
+#contact_info * { color: white; }
+
+#contact_info h5 { font-size: 12pt; }
+
+#contact_info p { padding-bottom: 8px; font-size: 10pt; }
 
 
 
