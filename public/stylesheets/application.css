@@ -54,7 +54,7 @@ div#content { clear: both; }
 
 /* project list */
 #project_list { clear: both; background-image: url('../images/recent_work.png'); 
-				overflow: auto; background-repeat: no-repeat; }
+				overflow: auto; background-repeat: no-repeat; width: 900px; }
 
 #project_list li { clear: both; }
 
