@@ -93,7 +93,7 @@ p#contact_content textarea { padding-top: 5px; overflow: auto; }
 #contact_form p * { border: none; font-size: 11pt; background-color: transparent; 
 					line-height: 1.1; }
 					
-#contact_submit { float: right; border: none; padding-bottom: 10px; }
+#contact_submit { float: right; border: none; padding-bottom: 12px; }
 
 #contact_info { float: left; padding-left: 40px; padding-top: 200px; }
 
