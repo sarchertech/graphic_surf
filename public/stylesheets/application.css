@@ -88,15 +88,15 @@ div#content { clear: both; }
 #contact_form h4 { padding-bottom: 10px; font-size: 22pt; letter-spacing: -.08em; 
 				   font-weight: bold; line-height: 1; }
 
-#contact_form p { margin-bottom: 12px; padding: 6px; line-height: 1; width: 320px;
+#contact_form p { margin-bottom: 12px; padding: 6px; line-height: 1; width: 308px;
 				  background-image: url('../images/1pixel.png');}
 					
 p#on_mind { margin-bottom: 0px; }
 					
-p#on_mind textarea { padding-top: 5px; overflow: auto; width: 315px; height: 120px; }
+p#on_mind textarea { padding-top: 5px; overflow: auto; width: 303px; height: 120px; }
 
 #contact_form p * { border: none; font-size: 11pt; line-height: 1.1; 
-						background: transparent; }
+					background: transparent; }
 					
 #contact_submit { float: right; margin-top: 13px; margin-bottom: 5px; }
 
@@ -113,13 +113,11 @@ p#on_mind textarea { padding-top: 5px; overflow: auto; width: 315px; height: 120
 /* validation */
 #contact_form .LV_validation_message{
     font-weight:bold; line-height: 1.1; float: left; display: block; height: 1.1em; 
-	margin-bottom: -1.1em; position: relative; top: -1.1em; left: 25em; font-size: 10pt;}
+	margin-bottom: -1.1em; position: relative; top: -1.1em; left: 24em; font-size: 10pt;}
 
-#contact_form .LV_valid {
-    color:#00CC00; }
+#contact_form .LV_valid { color:#00CC00; }
 	
-#contact_form .LV_invalid {
-    color:#CC0000; }
+#contact_form .LV_invalid { color:#CC0000; }
     
 
 
