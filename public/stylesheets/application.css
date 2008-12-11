@@ -74,7 +74,7 @@ div#content { clear: both; }
 
 #contact_return { width: 580px; clear: both; margin-bottom: 5px; }
 
-#contact_return a { float: right; color: white; font-size: 12pt; padding-top: 3px; }
+#contact_return a { float: right; color: white; font-size: 10pt; padding-top: 4px; }
 
 #contact_wrapper { background-image: url('../images/1pixel.png'); width: 540px;
  				   padding-left: 40px; padding-top: 10px; }
@@ -100,7 +100,7 @@ p#on_mind textarea { padding-top: 5px; overflow: auto; width: 303px; height: 120
 					
 #contact_submit { float: right; margin-top: 13px; margin-bottom: 5px; }
 
-#contact_info { float: left; padding-left: 40px; padding-top: 12em; }
+#contact_info { float: left; padding-left: 40px; padding-top: 11.9em; }
 
 #contact_info * { color: white; }
 
