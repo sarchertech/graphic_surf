@@ -56,15 +56,15 @@
 				<% form_for :contact, :url => {:controller => 'contacter', :action => 'contact'} do |f| -%>
 				  
 					<p>
-					  <%= f.label :name, 'Name &nbsp' %>
+					  <%= f.label :name, 'Name &nbsp;' %>
 			      <%= f.text_field :name %>
 			    </p>
 					<p>
-						<%= f.label :email, 'Email &nbsp' %>
+						<%= f.label :email, 'Email &nbsp;' %>
 			    	<%= f.text_field :email %>
 			    </p>
 					<p>
-						<%= f.label :phone, 'Phone &nbsp' %>
+						<%= f.label :phone, 'Phone &nbsp;' %>
 			      <%= f.text_field :phone %>
 					</p>
 					<p id="on_mind">
