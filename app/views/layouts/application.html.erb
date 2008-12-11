@@ -5,7 +5,7 @@
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>Graphic Surf</title>
-  <%= stylesheet_link_tag 'application', 'lightbox'%>
+  <%= stylesheet_link_tag 'application', 'lightbox', :cache => true %>
 	<%= @content_for_page_stylesheets %>
 	
 	<%= javascript_include_tag 'prototype', 'effects', 'builder', 'lightbox', 'application',
