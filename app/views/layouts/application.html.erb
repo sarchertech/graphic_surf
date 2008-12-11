@@ -9,7 +9,7 @@
 	<%= @content_for_page_stylesheets %>
 	
 	<%= javascript_include_tag 'prototype', 'effects', 'builder', 'lightbox', 'application',
-	                            :cache => true %>
+														 'livevalidation', :cache => true %>
 	
 	<!--[if lt IE 7]>
 		<script type="text/javascript" src="/javascripts/unitpngfix.js"></script>
@@ -69,11 +69,12 @@
 					</p>
 					<p id="on_mind">
 						<%= f.label :content, "What's on your mind?" %>
-			    	<%= f.text_area :content, :size => '36x6' %>
+			    	<%= f.text_area :content, :size => '34x6' %>
 					</p>
 			
 					<%= image_submit_tag("submit_button.png", :id => "contact_submit", :name => "submit_button", :disabled => false) %>
 				<% end -%>
+				<script src="/javascripts/contact_validation.js?" type="text/javascript"></script>
 	 	  </div>
 
 		  <div id="contact_info">
