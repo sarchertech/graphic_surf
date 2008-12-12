@@ -28,7 +28,7 @@ div#post_content p { padding-bottom: 20px; line-height: 1.5; font-size: 11pt; }
 div#post_content img { padding-bottom: 20px; }
 
 /* comments */
-h5 { font-size: 12pt; padding-bottom: 10px; padding-top: 20px;
+div#post h5 { font-size: 12pt; padding-bottom: 10px; padding-top: 20px;
 	 border-top: solid 1px #2b2b2b; }
 
 div#comment_form p { padding-bottom: 10px; }
