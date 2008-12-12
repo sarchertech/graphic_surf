@@ -41,6 +41,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     
     if @post.update_attributes(params[:post])
+      expire_page :controller => 'blog', :action => 'index'
       flash[:notice] = "Successfully updated post."
       redirect_to(@post)
     else
@@ -52,7 +53,8 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-
+    expire_page :controller => 'blog', :action => 'index'
+    
     redirect_to(posts_url)
   end
   
@@ -60,6 +62,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @post.published = true
     @post.save
+    expire_page :controller => 'blog', :action => 'index'
     
     redirect_to(@post)
   end  

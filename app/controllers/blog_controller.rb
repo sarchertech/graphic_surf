@@ -1,4 +1,6 @@
 class BlogController < ApplicationController
+  caches_page :index
+  
   def index
     @post = Post.published.last
     @posts = Post.published.recent

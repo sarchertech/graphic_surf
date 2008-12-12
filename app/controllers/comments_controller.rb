@@ -54,6 +54,7 @@ class CommentsController < ApplicationController
       else
         @comment.body.gsub!(/\n/,"<br />")
         @comment.save
+        expire_page :controller => 'blog', :action => 'index'
         redirect_to :controller => 'blog', :action => 'show', :id => @comment.post_id
       end  
     end
@@ -66,6 +67,7 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       if @comment.update_attributes(params[:comment])
+        expire_page :controller => 'blog', :action => 'index'
         flash[:notice] = 'Comment was successfully updated.'
         format.html { redirect_to(@comment) }
         format.xml  { head :ok }
@@ -81,7 +83,8 @@ class CommentsController < ApplicationController
   def destroy
     @comment = Comment.find(params[:id])
     @comment.destroy
-
+    expire_page :controller => 'blog', :action => 'index'
+    
     respond_to do |format|
       format.html { redirect_to(comments_url) }
       format.xml  { head :ok }
