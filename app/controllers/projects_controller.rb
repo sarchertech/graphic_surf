@@ -28,6 +28,7 @@ class ProjectsController < ApplicationController
     @project = Project.new(params[:project])
     
     if @project.save
+      expire_page :controller => 'pages', :action => 'index'
       flash[:notice] = 'Project was successfully created.'
       redirect_to(@project) 
     else
@@ -42,6 +43,7 @@ class ProjectsController < ApplicationController
     @project = Project.find(params[:id])
     
     if @project.update_attributes(params[:project])
+      expire_page :controller => 'pages', :action => 'index'
       flash[:notice] = "Successfully updated project."
       redirect_to(@project)
     else
@@ -53,7 +55,8 @@ class ProjectsController < ApplicationController
   def destroy
     @project = Project.find(params[:id])
     @project.destroy
-
+    expire_page :controller => 'pages', :action => 'index'
+    
     redirect_to(projects_url)
   end
 end

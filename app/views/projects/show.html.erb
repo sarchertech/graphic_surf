@@ -16,11 +16,14 @@
 	</div>
 	
 	<p class="pic_name"><%= @project.project_pictures.primary_pic.photo_file_name %></p>
-	<%= image_tag(@project.project_pictures.primary_pic.photo.url(:thumb)) %>
+	<%= image_tag(@project.preview_picture.preview_photo.url, :size =>"570x380") %>
+	
+	<p class="pic_name"><%= @project.project_pictures.primary_pic.photo_file_name %></p>
+	<%= image_tag(@project.project_pictures.primary_pic.photo.url) %>
 	
 	<% for pic in @project.project_pictures.secondary_pics %>
 		<p class="pic_name"><%= pic.photo_file_name %></p>
-		<%= image_tag(pic.photo.url(:thumb))%>
+		<%= image_tag(pic.photo.url) %>
 	<% end %>
 
 </div>

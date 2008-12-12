@@ -68,7 +68,7 @@ div#content { clear: both; }
 #project_list p { margin-bottom: 15px; font-size: 10pt; line-height: 1.6; }
 
 /* contact */
-#gradient_wrapper { background-image: url('../images/bottom_gradient.png'); height: 1014px; 
+#gradient_wrapper { background-image: url('../images/bottom_gradient.png'); height: 622px; 
 					background-color: #012841; background-repeat: repeat-x;
 					margin-top: 500px; }
 
@@ -109,6 +109,8 @@ p#on_mind textarea { padding-top: 5px; overflow: auto; width: 303px; height: 120
 				   background-repeat: no-repeat; }
 
 #contact_info p { padding-bottom: 8px; font-size: 10pt; padding-left: 5px; }
+
+#diver { background-color: #012841; height: 282px; }
 
 /* validation */
 #contact_form .LV_validation_message{
