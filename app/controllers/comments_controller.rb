@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
   before_filter :authenticate, :except => :create
+  skip_before_filter :verify_authenticity_token, :only => :create
   
   # GET /comments
   # GET /comments.xml
